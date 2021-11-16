@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using UnityEngine.IO;
 
 #if UNITY_EDITOR
 using UnityEditor;
@@ -31,6 +33,13 @@ public class MenuUIHandler : MonoBehaviour
         SceneManager.LoadScene(1);
     }
 
+   /* public void EditName()
+    {
+        MenuUIHandler.Instance.playername = inputField.text; ;
+        inputField.text = "";
+        GameObject.Find("Player Name").GetComponent<Text>().text = "Welcome" + MenuUIHandler.Instance.p;layerName; ;
+    }*/
+
     public void Exit()
     {
 #if UNITY_EDITOR
@@ -40,8 +49,5 @@ public class MenuUIHandler : MonoBehaviour
 #endif
     }
 
-    public void returnHome()
-    {
-        SceneManager.LoadScene(0);
-    }
+    
 }
