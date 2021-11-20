@@ -33,6 +33,7 @@ public class MenuUIHandler : MonoBehaviour
     public void StartNew()
     {
         Debug.Log("Player Name is:" + playerName.text);
+        MainManager.playerNameStr = playerName.text;
         SceneManager.LoadScene(1);
 
     }

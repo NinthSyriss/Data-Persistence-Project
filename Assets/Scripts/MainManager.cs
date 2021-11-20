@@ -14,6 +14,9 @@ public class MainManager : MonoBehaviour
 
     public Text ScoreText;
     public GameObject GameOverText;
+
+    public static string playerNameStr;
+    public Text playerNameDisplay;
     public Text BestScore;
     
     private bool m_Started = false;
@@ -24,25 +27,12 @@ public class MainManager : MonoBehaviour
 
 
 
-    /*public void Awake()
-
-    {
-        if (Instance != null)
-        {
-           
-            Destroy(gameObject);
-            return;
-
-        }
-        Instance = this;
-        DontDestroyOnLoad(gameObject);
-
-
-    }*/
 
     // Start is called before the first frame update
     void Start()
     {
+        playerNameDisplay.text = ("Player : ") + playerNameStr;
+
         const float step = 0.6f;
         int perLine = Mathf.FloorToInt(4.0f / step);
         
