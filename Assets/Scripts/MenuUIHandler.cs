@@ -5,6 +5,7 @@ using System;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.IO;
+using TMPro;
 
 #if UNITY_EDITOR
 using UnityEditor;
@@ -14,6 +15,7 @@ using UnityEditor;
 [DefaultExecutionOrder(1000)]
 public class MenuUIHandler : MonoBehaviour
 {
+    public InputField playerName;
 
 
     // Start is called before the first frame update
@@ -30,15 +32,12 @@ public class MenuUIHandler : MonoBehaviour
 
     public void StartNew()
     {
+        Debug.Log("Player Name is:" + playerName.text);
         SceneManager.LoadScene(1);
+
     }
 
-   /* public void EditName()
-    {
-        MenuUIHandler.Instance.playername = inputField.text; ;
-        inputField.text = "";
-        GameObject.Find("Player Name").GetComponent<Text>().text = "Welcome" + MenuUIHandler.Instance.p;layerName; ;
-    }*/
+  
 
     public void Exit()
     {
